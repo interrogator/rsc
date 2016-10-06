@@ -1,6 +1,6 @@
 # Royal Society Corpus: parsing and interrogating
 
-This directory is a *[corpkit](https://www.github.com/interrogator/corpkit) project*, which contains a parsed version of the Royal Society Corpus (`data/rsc-annual-parsed.tar.gz`), and some figures (`images/`) created during preliminary investigation.
+This directory is a [`corpkit`](https://www.github.com/interrogator/corpkit) project, which contains a parsed version of the Royal Society Corpus (`data/rsc-annual-parsed.tar.gz`), and some figures (`images/`) created during preliminary investigation.
 
 ## The Corpus
 
