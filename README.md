@@ -38,8 +38,8 @@ Import module:
 Model corpus and set up filters:
 
 ```python
->>> filter = {'engprob': '^1', 'tags': 'root_verb'}
->>> corpus = Corpus('rsc-annual-parsed', just=filter)
+>>> filt = {'engprob': '^1', 'tags': 'root_verb'}
+>>> corpus = Corpus('rsc-annual-parsed', just=filt)
 ```
 
 Get lemma forms of grammatical participants:
@@ -47,7 +47,7 @@ Get lemma forms of grammatical participants:
 ```python
 >>> query = {F: roles.participant, GF: roles.process}
 ### conc=True turns on concordancing, which can be slow
-part = corpus.interrogate(query, show=L, conc=True)
+>>> part = corpus.interrogate(query, show=L, conc=True)
 ```
 
 Make relative frequencies and sort: 
