@@ -1,26 +1,26 @@
-# Royal Society Corpus (RSC): parsing and interrogating
+# Royal Society Corpus: parsing and interrogating
 
-This directory is a *[corpkit](https://www.github.com/interrogator/corpkit) project*, which contains a parsed version of the Royal Society Corpus (`./data/rsc-annual-parsed'), and some figures (`./images`) created during preliminary investigation.
+This directory is a *[corpkit](https://www.github.com/interrogator/corpkit) project*, which contains a parsed version of the Royal Society Corpus (`data/rsc-annual-parsed.tar.gz`), and some figures (`images/`) created during preliminary investigation.
 
 ## The Corpus
 
-The parsed RSC was created with [Stanford CoreNLP](http://stanfordnlp.github.io/CoreNLP/) and *corpkit*. The data from `v1.19` was unzipped, and fed to `./convert_xml_to_corpkit.py`. Coreference resolution was not performed, copula was treated as `root` where possible, and *collapsed, CC-processed dependencies* are used.
+The parsed RSC was created with [Stanford CoreNLP](http://stanfordnlp.github.io/CoreNLP/) and `corpkit`. The data from `v1.19` was unzipped, and fed to `convert_xml_to_corpkit.py`. Coreference resolution was not performed, copula was treated as `root` where possible, and *collapsed, CC-processed dependencies* are used.
 
 The corpus has annual subfolders. Each folder contains files in a [`CONLL-U`](http://universaldependencies.org/format.html)-like format, with filenames the same as in the original bundle, plus the `.conll` extension. All original metadata is preserved, plus `engprob`, which gives a probability that a file contains English text, and `lang`, which gives the most likely language. Some sentences also have `tags=root_verb` as metadata, indicating that the `root` lemma was found in VerbNet.
 
-## Using *corpkit* to explore the corpus
+## Using `corpkit` to explore the corpus
 
-*corpkit* is an API, interpreter and GUI for corpus linguistic research, written in Python. Documentation for the API and interpreter are [here](http://corpkit.readthedocs.io). Documentation for the GUI is [here](http://interrogator.github.io/corpkit/).
+`corpkit` is an API, interpreter and GUI for corpus linguistic research, written in Python. Documentation for the API and interpreter are [here](http://corpkit.readthedocs.io). Documentation for the GUI is [here](http://interrogator.github.io/corpkit/).
 
-If you want to use *corpkit* to explore the data, you need to have Python (2.7 or 3.x) and `pip`. Then, you can install it with:
+If you want to use `corpkit` to explore the data, you need to have Python (2.7 or 3.x) and `pip`. Then, you can install it with:
 
 ```bash
 $ pip install corpkit
 ```
 
-Once *corpkit* is installed, `cd` into this directory. You can then choose how you'd like to use the tool:
+Once `corpkit` is installed, `cd` into this directory. You can then choose how you'd like to use the tool:
 
-1. GUI: `python -m corpkit.gui
+1. GUI: `python -m corpkit.gui`
 2. API: `python` or `ipython`; `from corpkit import *`
 3. Interpreter: `corpkit`
 
@@ -87,4 +87,4 @@ Editing, sorting and visualising the result:
 > plot edited as line chart with subplots and layout as (3,3)
 ```
 
-Please report any issues via GitHub. *corpkit* errors should go to the [corpkit repo](https://www.github.com/interrogator/corpkit), and RSC-related things to the [RSC repo](https://www.github.com/interrogator/rsc).
+Please report any issues via GitHub. `corpkit` errors should go to the [corpkit repo](https://www.github.com/interrogator/corpkit), and RSC-related things to the [RSC repo](https://www.github.com/interrogator/rsc).
