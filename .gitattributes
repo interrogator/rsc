@@ -1,2 +1,2 @@
 data/rsc-annual-parsed.tar.gz filter=lfs diff=lfs merge=lfs -text
-data/rsc-annual-parsed.tar.gz linguist-vendored=false
+dictionaries/bnc.p linguist-vendored=false
