@@ -1,1 +1,13 @@
 rsc_data/
+talks/rsc-parsing.aux
+talks/rsc-parsing.bbl
+talks/rsc-parsing.blg
+talks/rsc-parsing.log
+talks/rsc-parsing.nav
+talks/rsc-parsing.out
+talks/rsc-parsing.snm
+talks/rsc-parsing.synctex.gz
+talks/rsc-parsing.toc
+talks/rsc-parsing.vrb
+oldstuff/
+.DS_Store
