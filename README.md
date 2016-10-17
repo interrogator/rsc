@@ -1,12 +1,16 @@
 # Royal Society Corpus: parsing and interrogating
 
-This directory is a [`corpkit`](https://www.github.com/interrogator/corpkit) project, which contains a parsed version of the Royal Society Corpus (`data/rsc-annual-parsed.tar.gz`), and some figures (`images/`) created during preliminary investigation.
+This directory/repository is a [`corpkit`](https://www.github.com/interrogator/corpkit) project, which contains a parsed version of the Royal Society Corpus (`data/rsc-annual-parsed.tar.gz`), and some figures (`images/`) created during preliminary investigation.
 
 ## The Corpus
 
 The parsed RSC was created with [Stanford CoreNLP](http://stanfordnlp.github.io/CoreNLP/) and `corpkit`. The data from `v1.19` was unzipped, and fed to `convert_xml_to_corpkit.py`. Coreference resolution was not performed, copula was treated as `root` where possible, and *collapsed, CC-processed dependencies* are used.
 
 The corpus has annual subfolders. Each folder contains files in a [`CONLL-U`](http://universaldependencies.org/format.html)-like format, with filenames the same as in the original bundle, plus the `.conll` extension. All original metadata is preserved, plus `engprob`, which gives a probability that a file contains English text, and `lang`, which gives the most likely language. Some sentences also have `tags=root_verb` as metadata, indicating that the `root` lemma was found in VerbNet.
+
+## Preliminary investigation
+
+The first attempt to extract information from the corpus is documented in a Jupyter Notebook [here](https://github.com/interrogator/rsc/blob/master/notebook.ipynb).
 
 ## Using `corpkit` to explore the corpus
 
