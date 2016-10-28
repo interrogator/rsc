@@ -14,3 +14,5 @@ oldstuff/
 data/rsc-annual-parsed/
 rsc-proj.tar.gz
 .ipynb_checkpoints/
+tokenizers/
+orig/
