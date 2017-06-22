@@ -46,6 +46,11 @@ def split_file(f):
             outf.write(line)
 
 def main(f='rsc_v2-0.vrt', indir='splitfiles'):
+    """
+    Turn VRT version of corpus into a folder containing annual subfolders,
+    with each subfolder container files for each article. Each article is in
+    word_pos format, with metadata preserved as XML. corpkit parsing then handle this.
+    """
     import os
     import re
     import pandas as pd
@@ -53,7 +58,7 @@ def main(f='rsc_v2-0.vrt', indir='splitfiles'):
     
     # make the split file if not done already
     if not os.path.exists(indir):
-        splitfiles(f)
+        split_file(f)
 
     namefind = re.compile('<text id="([0-9]+)"')
     yearfind = re.compile(' year="([0-9]+)"')
